@@ -19,7 +19,7 @@
 	<div style="padding-left:16px">
 		<div class="centered-div">
 			<button onclick="document.getElementById('login').style.display='block'">Login</button>
-			<button>Signup</button>
+			<button onclick="window.location.href='signup.html'">Signup</button>
 		</div>
 	</div>
 
@@ -42,7 +42,7 @@
 	        <input type="checkbox" checked="checked" name="remember"> Remember me
 	      </label>
 	      <div id="loginBtn">
-		      <button type="submit" class="loginBtn">Login</button>
+		      <button type="submit" class="loginBtn" onclick="logIn()">Login</button>
 		  </div>
 	    </div>
 
@@ -71,6 +71,11 @@
 		    if (event.target == modal) {
 		        modal.style.display = "none";
 		    }
+		}
+
+		// Login
+		function logIn() {
+			window.location.href = './pages/home.html';
 		}
 	</script>
 
